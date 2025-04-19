@@ -43,6 +43,11 @@
       const content = document.getElementById('faq-' + index);
       content.classList.toggle('hidden');
     }
+    //Contact Form Submit
+    function handleForm(e) {
+  e.preventDefault(); // prevents page from refreshing
+  alert("Thanks! Your message has been sent.");
+}
   </script>
 </head>
 <body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-white font-sans transition-all">
@@ -134,7 +139,7 @@
   <section id="contact" class="py-16 px-6 bg-yellow-50 dark:bg-gray-900">
     <div class="max-w-2xl mx-auto">
       <h2 class="text-3xl font-semibold mb-4">Contact Us</h2>
-      <form class="grid grid-cols-1 gap-4">
+     <form class="grid grid-cols-1 gap-4" onsubmit="handleForm(event)">
         <input type="text" placeholder="Your Name" class="border p-2 rounded">
         <input type="email" placeholder="Your Email" class="border p-2 rounded">
         <textarea rows="4" placeholder="Your Message" class="border p-2 rounded"></textarea>
